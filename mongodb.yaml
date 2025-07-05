@@ -18,7 +18,7 @@
         state: started
         enabled: yes
 
-    - name: replacing 127.0.0.1 to 0.0.0.0 in /etc/mongod.conf
+    - name: replacing 
       ansible.builtin.replace::
         path: /etc/mongod.conf  # Path to the file
         regexp: '127.0.0.1'         # The string or regex to find
@@ -28,6 +28,6 @@
       ansible.builtin.service:
         - name: mongod
           state: restarted
-          
+
 
 
